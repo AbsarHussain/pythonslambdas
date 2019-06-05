@@ -166,7 +166,7 @@ def lambda_handler(event, context):
         msg.attach((body_html))
         send_to = ['email_to']
         print 'sending mail'
-        smtp = smtplib.SMTP('insig-Outgo-FDPNUQ0UKAC4-8c4e06621634b50d.elb.us-east-1.amazonaws.com')
+        smtp = smtplib.SMTP('Place the ELB DNS NAME HERE WHICH YOU are USING FOR SMTP OUTGOING')
         smtp.sendmail('Email_from', send_to, msg.as_string())
         return {
             'statusCode': 200,
